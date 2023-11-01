@@ -1,0 +1,12 @@
+header {
+    background-color: white;
+    color: pink;
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: bolder;
+    padding-top: 30px;
+    min-height: 60px;
+    border-bottom: #bbb 4px solid;
+    text-align: center;
+}
+
