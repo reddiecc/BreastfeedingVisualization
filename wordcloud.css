@@ -12,9 +12,6 @@
     cursor: pointer;
 }
 
-.word:hover {
-    color: #e74c3c;
-}
 
 header {
     background-color: white;
@@ -25,4 +22,33 @@ header {
     padding-top: 30px;
     min-height: 60px;
     text-align: center;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ecf0f1;
+    font-family: Arial, sans-serif;
+}
+
+#wordCloud {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    position: relative;
+}
+
+.word {
+    font-size: 20px;
+    display: inline-block;
+    position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.word:hover {
+    color: #e74c3c;
 }

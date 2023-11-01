@@ -23,16 +23,24 @@ function generateWordCloud(text) {
     });
     const wordEntries = Object.entries(wordCount).map(([text, size]) => ({ text, size }));
 
+    //const layout = d3.layout.cloud()
+     //   .size([800, 500])
+       // .words(wordEntries)
+      //  .padding(1)
+      //  .rotate(() => (~~(Math.random() * 6) - 3) * 30)
+       // .fontSize(d => Math.sqrt(d.size) * 10)
+      //  .on("end", draw);
+
+    //layout.start();
     const layout = d3.layout.cloud()
-        .size([800, 500])
+        .size([500, 500])
         .words(wordEntries)
-        .padding(1)
-        .rotate(() => (~~(Math.random() * 6) - 3) * 30)
-        .fontSize(d => Math.sqrt(d.size) * 10)
+        .padding(5)
+        .rotate(() => 0)  // Rotate the words to be horizontal
+        .fontSize(d => d.size)
         .on("end", draw);
 
     layout.start();
-
     function draw(words) {
         d3.select("#wordCloud").append("svg")
             .attr("width", layout.size()[0])
