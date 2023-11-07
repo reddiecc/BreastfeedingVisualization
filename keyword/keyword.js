@@ -22,7 +22,7 @@ function extractKeywords(text) {
             acc[word] = (acc[word] || 0) + 1;
         }
         return acc;
-    }, {});
+    }, {})
 
     // Convert the word frequencies object to an array of { word, count } objects and sort by count descending
     //const sortedKeywords = Object.entries(wordFrequencies)
