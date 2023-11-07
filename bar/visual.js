@@ -84,7 +84,7 @@ function renderChart(data) {
                 .style('left', (event.pageX + 5) + 'px')
                 .style('top', (event.pageY - 28) + 'px');
         })
-        .on('mouseout', function (d) {
+        .on('mouseout', function () {
             tooltip.transition()
                 .duration(500)
                 .style('opacity', 0);

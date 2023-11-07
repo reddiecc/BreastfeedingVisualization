@@ -25,12 +25,12 @@ function extractKeywords(text) {
     }, {});
 
     // Convert the word frequencies object to an array of { word, count } objects and sort by count descending
-    const sortedKeywords = Object.entries(wordFrequencies)
+    //const sortedKeywords = Object.entries(wordFrequencies)
         .map(([word, count]) => ({ word, count }))
         .sort((a, b) => b.count - a.count)
         .slice(0, 30); // Get the top 30 keywords
 
-    return sortedKeywords;
+    //return sortedKeywords;
 }
 
 function renderChart(keywords) {
