@@ -55,8 +55,8 @@ function extractKeywords(abstract) {
     });
 
     //let sortedWords = Object.keys(frequency)
-        .sort((a, b) => frequency[b] - frequency[a])
-        .slice(0, 5); // Get top 5 words
+        //.sort((a, b) => frequency[b] - frequency[a])
+       // .slice(0, 5); // Get top 5 words
 
     //return sortedWords;
 }
