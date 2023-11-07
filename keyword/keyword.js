@@ -17,18 +17,19 @@ function extractKeywords(text) {
 
     // Tokenize the text, remove stop words and short words, and count word frequencies
     const words = text.toLowerCase().match(/\b(\w+)\b/g);
-    const wordFrequencies = words.reduce((acc, word) => {
+    words.reduce((acc, word) => {
         if (!stopWords.has(word) && word.length > 2) {
             acc[word] = (acc[word] || 0) + 1;
         }
         return acc;
     }, {})
 
-    // Convert the word frequencies object to an array of { word, count } objects and sort by count descending
-    //const sortedKeywords = Object.entries(wordFrequencies)
+        // Convert the word frequencies object to an array of { word, count } objects and sort by count descending
+        //const sortedKeywords = Object.entries(wordFrequencies)
         .map(([word, count]) => ({ word, count }))
         .sort((a, b) => b.count - a.count)
-        .slice(0, 30); // Get the top 30 keywords
+        .slice(0, 30);
+// Get the top 30 keywords
 
     //return sortedKeywords;
 }
